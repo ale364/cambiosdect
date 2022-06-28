@@ -12,100 +12,108 @@
         <link rel="stylesheet" type="text/css" href="resources/ol3-search-layer.min.css">
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
         <link rel="stylesheet" href="./resources/qgis2web.css">
-<style>
-.search-layer {
-  top: 135px;
-  left: .5em;
-}
-.ol-touch .search-layer {
-  top: 180px;
-}
-</style>
+
         <style>
-        html, body {
-            background-color: #fffcfd;
-        }
-        .ol-control button {
-            background-color: #1f78b4 !important;
-            color: #ffffff !important;
-            border-radius: 0px !important;
-        }
-        .ol-zoom, .geolocate, .gcd-gl-control .ol-control {
-            background-color: rgba(255,255,255,.4) !important;
-            padding: 3px !important;
-        }
-        .ol-scale-line {
-            background: none !important;
-        }
-        .ol-scale-line-inner {
-            border: 2px solid #1f78b4 !important;
-            border-top: none !important;
-            background: rgba(255, 255, 255, 0.5) !important;
-            color: black !important;
-        }
+          .search-layer {
+            top: 135px;
+            left: .5em;
+          }
+          .ol-touch .search-layer {
+            top: 180px;
+          }
+        </style>
+        <style>
+          html, body {
+              background-color: #fffcfd;
+          }
+          .ol-control button {
+              background-color: #1f78b4 !important;
+              color: #ffffff !important;
+              border-radius: 0px !important;
+          }
+          .ol-zoom, .geolocate, .gcd-gl-control .ol-control {
+              background-color: rgba(255,255,255,.4) !important;
+              padding: 3px !important;
+          }
+          .ol-scale-line {
+              background: none !important;
+          }
+          .ol-scale-line-inner {
+              border: 2px solid #1f78b4 !important;
+              border-top: none !important;
+              background: rgba(255, 255, 255, 0.5) !important;
+              color: black !important;
+          }
         </style>
 
         <style>
-        .geolocate {
-            top: 65px;
-            left: .5em;
-        }
-        .ol-touch .geolocate {
-            top: 80px;
-        }
+          .geolocate {
+              top: 65px;
+              left: .5em;
+          }
+          .ol-touch .geolocate {
+              top: 80px;
+          }
         </style>
-<style>
-.tooltip {
-  position: relative;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
-  color: white;
-  padding: 4px 8px;
-  opacity: 0.7;
-  white-space: nowrap;
-}
-.tooltip-measure {
-  opacity: 1;
-  font-weight: bold;
-}
-.tooltip-static {
-  background-color: #ffcc33;
-  color: black;
-  border: 1px solid white;
-}
-.tooltip-measure:before,
-.tooltip-static:before {
-  border-top: 6px solid rgba(0, 0, 0, 0.5);
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  margin-left: -7px;
-  left: 50%;
-}
-.tooltip-static:before {
-  border-top-color: #ffcc33;
-}
-.measure-control {
-  top: 100px;
-  left: .5em;
-}
-.ol-touch .measure-control {
-  top: 130px;
-}
-</style>
         <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
+          .tooltip {
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            color: white;
+            padding: 4px 8px;
+            opacity: 0.7;
+            white-space: nowrap;
+          }
+          .tooltip-measure {
+            opacity: 1;
+            font-weight: bold;
+          }
+          .tooltip-static {
+            background-color: #ffcc33;
+            color: black;
+            border: 1px solid white;
+          }
+          .tooltip-measure:before,
+          .tooltip-static:before {
+            border-top: 6px solid rgba(0, 0, 0, 0.5);
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            margin-left: -7px;
+            left: 50%;
+          }
+          .tooltip-static:before {
+            border-top-color: #ffcc33;
+          }
+          .measure-control {
+            top: 100px;
+            left: .5em;
+          }
+          .ol-touch .measure-control {
+            top: 130px;
+          }
+        </style>
+        <style>
+          html, body, #map {
+              width: 100%;
+              height: 90%;
+              padding: 3;
+              margin: 3;
+          }
+          h3, h4 {
+            text-align: center;
+          }
         </style>
         <title></title>
     </head>
     <body>
+        <div class="header">
+            <h3>Módulo Interactivo del Proceso de Cambios de Centros de Trabajo</h3>
+            <h4>Ciclo Escolar 2022 - 2023</h4>
+        </div>
         <div id="map">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
@@ -113,7 +121,7 @@
             </div>
         </div>
         <script src="resources/qgis2web_expressions.js"></script>
-<script src="resources/proj4.js"></script>
+        <script src="resources/proj4.js"></script>
         <script>proj4.defs('EPSG:6372','+proj=lcc +lat_0=12 +lon_0=-102 +lat_1=17.5 +lat_2=29.5 +x_0=2500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs');</script>
         <script src="resources/polyfills.js"></script>
         <script src="./resources/functions.js"></script>
